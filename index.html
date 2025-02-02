@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Guess Number Please...</h2>
+            <input type="number" placeholder="Enter number" id="inputno"><br><br>
+            <button onclick="guess()">Start</button>
+        </div>
+    </div>
+<script>
+    let guessed=Math.floor(Math.random()*10);
+    function guess(){
+       let input=document.getElementById("inputno").value;
+       let ans=parseInt(input)
+
+       if(ans==guessed){
+        alert("Congratulation you won the game");
+       }
+       else if(ans>guessed){
+        alert("Guess Lower number");
+       }
+       else{
+        alert("Guess Higher number");
+       }
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
